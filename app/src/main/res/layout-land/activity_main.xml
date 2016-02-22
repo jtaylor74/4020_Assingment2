@@ -3,7 +3,7 @@
     android:id="@+id/tableLayout1"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical">
+    android:orientation="horizontal">
 
     <!-- High Score Text View -->
     <TableRow
@@ -45,13 +45,13 @@
         <Button
             android:id="@+id/btn_green"
             android:background="@drawable/green_button"
-            android:layout_height="225dp"
+            android:layout_height="125dp"
             android:layout_weight="0.4"/>
 
         <Button
             android:id="@+id/btn_red"
             android:background="@drawable/red_button"
-            android:layout_height="225dp"
+            android:layout_height="125dp"
             android:layout_weight="0.4"/>
 
     </TableRow>
@@ -66,13 +66,13 @@
         <Button
             android:id="@+id/btn_yellow"
             android:background="@drawable/yellow_button"
-            android:layout_height="225dp"
+            android:layout_height="125dp"
             android:layout_weight="0.4"/>
 
         <Button
             android:id="@+id/btn_blue"
             android:background="@drawable/blue_button"
-            android:layout_height="225dp"
+            android:layout_height="125dp"
             android:layout_weight="0.4"/>
 
 
