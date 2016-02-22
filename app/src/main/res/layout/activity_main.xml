@@ -1,35 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context="simon.android.com.simon.MainActivity">
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tableLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
 
-    <android.support.design.widget.AppBarLayout
+    <!-- High Score Text View -->
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:padding="5dip" >
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+        <TextView
+            android:id="@+id/tv_highScoreText"
+            android:text="@string/high_score"
+            android:textSize="20sp"
+            android:layout_weight="0.9"/>
 
-    </android.support.design.widget.AppBarLayout>
+        <TextView
+            android:id="@+id/tv_highScore"
+            android:text="placeholder"
+            android:textSize="20sp"
+            android:layout_weight="0.1"/>
 
-    <include layout="@layout/content_main"/>
+    </TableRow>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
+    <!-- Blank row to add space -->
+    <TableRow
+        android:id="@+id/tableRowSpacer"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_dialog_email" />
+        android:padding="5dip" >
 
-</android.support.design.widget.CoordinatorLayout>
+    </TableRow>
+
+    <!-- Green and red buttons -->
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dip">
+
+        <Button
+            android:id="@+id/btn_green"
+            android:background="@drawable/green_button"
+            android:layout_height="250dp"
+            android:layout_weight="0.4"/>
+
+        <Button
+            android:id="@+id/btn_red"
+            android:background="@drawable/red_button"
+            android:layout_height="250dp"
+            android:layout_weight="0.4"/>
+
+    </TableRow>
+
+    <!-- Blue and yellow buttons -->
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dip">
+
+        <Button
+            android:id="@+id/btn_blue"
+            android:background="@drawable/blue_button"
+            android:layout_height="250dp"
+            android:layout_weight="0.4"/>
+
+        <Button
+            android:id="@+id/btn_yellow"
+            android:background="@drawable/yellow_button"
+            android:layout_height="250dp"
+            android:layout_weight="0.4"/>
+
+    </TableRow>
+
+</TableLayout>
