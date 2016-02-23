@@ -3,6 +3,8 @@
     android:id="@+id/tableLayout1"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:padding="0dip"
+    android:layout_margin="0dip"
     android:orientation="vertical">
 
     <!-- High Score Text View -->
@@ -31,7 +33,7 @@
         android:id="@+id/tableRowSpacer"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:padding="5dip" >
+        android:padding="20dip">
 
     </TableRow>
 
@@ -40,7 +42,8 @@
         android:id="@+id/tableRow2"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:padding="5dip">
+        android:padding="0dip"
+        android:layout_margin="0dip">
 
         <Button
             android:id="@+id/btn_green"
@@ -61,7 +64,8 @@
         android:id="@+id/tableRow3"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:padding="5dip">
+        android:padding="0dip"
+        android:layout_margin="0dip">
 
         <Button
             android:id="@+id/btn_yellow"
@@ -74,8 +78,6 @@
             android:background="@drawable/blue_button"
             android:layout_height="225dp"
             android:layout_weight="0.4"/>
-
-
 
     </TableRow>
 
