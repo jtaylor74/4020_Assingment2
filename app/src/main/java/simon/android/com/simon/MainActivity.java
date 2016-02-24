@@ -2,16 +2,27 @@ package simon.android.com.simon;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private Button btnGreen;
+    private Button btnRed;
+    private Button btnYellow;
+    private Button btnBlue;
+    private TextView tvHighscore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +33,18 @@ public class MainActivity extends AppCompatActivity {
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
+        //Initialize buttons and text view
+        btnGreen = (Button) findViewById(R.id.btn_green);
+        btnRed = (Button) findViewById(R.id.btn_red);
+        btnYellow = (Button) findViewById(R.id.btn_yellow);
+        btnBlue = (Button) findViewById(R.id.btn_blue);
+        tvHighscore = (TextView) findViewById(R.id.tv_highScoreText);
+
+        //set onClickListeners for buttons
+        btnGreen.setOnClickListener(this);
+        btnRed.setOnClickListener(this);
+        btnYellow.setOnClickListener(this);
+        btnBlue.setOnClickListener(this);
 
     }
 
@@ -46,5 +69,29 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_green:
+                Log.d("onClick :: ", v + "");
+                break;
+
+            case R.id.btn_red:
+                Log.d("onClick :: ", v + "");
+                break;
+
+            case R.id.btn_yellow:
+                Log.d("onClick :: ", v + "");
+                break;
+
+            case R.id.btn_blue:
+                Log.d("onClick :: ", v + "");
+                break;
+
+            default:
+                break;
+        }
     }
 }
