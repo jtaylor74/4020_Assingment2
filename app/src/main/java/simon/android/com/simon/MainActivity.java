@@ -75,19 +75,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_green:
-                Log.d("onClick :: ", v + "");
+                Log.d("onClick :: ", "green");
                 break;
 
             case R.id.btn_red:
-                Log.d("onClick :: ", v + "");
+                Log.d("onClick :: ", "red");
                 break;
 
             case R.id.btn_yellow:
-                Log.d("onClick :: ", v + "");
+                Log.d("onClick :: ", "yellow");
                 break;
 
             case R.id.btn_blue:
-                Log.d("onClick :: ", v + "");
+                Log.d("onClick :: ", "blue");
                 break;
 
             default:
