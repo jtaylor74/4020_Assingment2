@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     //global definition of textView
     private TextView tvHighscore;
+    private int mScore;
 
     //const declarations of buttons to differentiate easily between guesses
     private final int GREEN_BUTTON = 0;
@@ -75,7 +76,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnRed = (Button) findViewById(R.id.btn_red);
         btnYellow = (Button) findViewById(R.id.btn_yellow);
         btnBlue = (Button) findViewById(R.id.btn_blue);
-        tvHighscore = (TextView) findViewById(R.id.tv_highScoreText);
+        tvHighscore = (TextView) findViewById(R.id.tv_highScore);
+
+        //Initialize high score
+        mScore = 0;
+        tvHighscore.setText("" + mScore);
 
         //set onClickListeners for buttons
         btnGreen.setOnClickListener(this);
@@ -266,12 +271,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return true;
         }
 
+        if (id == R.id.action_resetHighScore) {
+            mScore = 0;
+            tvHighscore.setText("" + mScore);
+            return true;
+        }
+
         return super.onOptionsItemSelected(item);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+
             case R.id.btn_green: {
 
                 //if there is no pattern(game hasn't started) start the game
@@ -287,6 +299,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     checkAnswer(GREEN_BUTTON);
 
                 Log.d("onClick :: ", v + "");
+
                 break;
             }
 
@@ -305,7 +318,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 else
                     checkAnswer(RED_BUTTON);
 
+
                 Log.d("onClick :: ", v + "");
+
                 break;
             }
 
@@ -324,7 +339,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 else
                     checkAnswer(YELLOW_BUTTON);
 
+
                 Log.d("onClick :: ", v + "");
+
                 break;
             }
 
@@ -343,7 +360,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 else
                     checkAnswer(BLUE_BUTTON);
 
+
                 Log.d("onClick :: ", v + "");
+
                 break;
             }
 
