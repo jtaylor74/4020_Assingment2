@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnYellow;
     private Button btnBlue;
     private TextView tvHighscore;
+    private int mScore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +39,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnRed = (Button) findViewById(R.id.btn_red);
         btnYellow = (Button) findViewById(R.id.btn_yellow);
         btnBlue = (Button) findViewById(R.id.btn_blue);
-        tvHighscore = (TextView) findViewById(R.id.tv_highScoreText);
+        tvHighscore = (TextView) findViewById(R.id.tv_highScore);
+
+        //Initialize high score
+        mScore = 0;
+        tvHighscore.setText("" + mScore);
 
         //set onClickListeners for buttons
         btnGreen.setOnClickListener(this);
@@ -65,6 +70,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            return true;
+        }
+
+        if (id == R.id.action_resetHighScore) {
+            mScore = 0;
+            tvHighscore.setText("" + mScore);
             return true;
         }
 
