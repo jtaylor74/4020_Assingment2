@@ -30,7 +30,7 @@
 
         <TextView
             android:id="@+id/tv_highScore"
-            android:text="placeholder"
+            android:text="0"
             android:textSize="20sp"
             android:layout_weight="0.1"/>
 
